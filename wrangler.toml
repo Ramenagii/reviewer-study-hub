@@ -1,0 +1,22 @@
+name = "reviewer-app"
+main = "worker/index.ts"
+compatibility_date = "2026-06-01"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "reviewer-db"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "reviewer-uploads"
+
+[vars]
+OPENAI_MODEL = "gpt-5-mini"
+
